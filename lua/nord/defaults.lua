@@ -21,7 +21,7 @@ function defaluts.highlights()
     Error = { fg = c.aurora.red, bg = c.polar_night.origin },
     ErrorMsg = { fg = c.snow_storm.origin, bg = c.aurora.red }, -- error messages on the command line
     VertSplit = { fg = c.lines, bg = global_bg }, -- the column separating vertically split windows
-    WinSeparator = { fg = c.lines, bg = c.none }, -- Separators between window splits.
+    WinSeparator = { fg = c.lines, bg = global_bg }, -- Separators between window splits.
     Folded = { fg = c.snow_storm.brightest, bg = c.polar_night.bright }, -- line used for closed folds
     FoldColumn = { fg = c.polar_night.brightest, bg = global_bg }, -- 'foldcolumn'
     SignColumn = { fg = c.polar_night.bright, bg = transparent_bg }, -- column where |signs| are displayed

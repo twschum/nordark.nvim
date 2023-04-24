@@ -28,10 +28,13 @@ function nord.load(opts)
     require("nord.plugins.completion").highlights(),
     require("nord.plugins.filetree").highlights(),
     require("nord.plugins.git").highlights(),
+    require("nord.plugins.lazy").highlights(),
     require("nord.plugins.motion").highlights(),
     require("nord.plugins.notify").highlights(),
     require("nord.plugins.picker").highlights(),
-    require("nord.plugins.ui").highlights()
+    require("nord.plugins.ui").highlights(),
+    -- Final overrides if a hl gets messed up
+    require("nord.final"),
   )
 end
 
