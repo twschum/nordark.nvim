@@ -22,7 +22,8 @@ function cmp.highlights()
   CmpItemKindField = { fg = c.frost.ice },
   CmpItemKindVariable = { fg = c.frost.artic_water },
   CmpItemKindSnippet = { fg = c.aurora.red },
-  CmpItemKindText = { fg = c.colors.green },
+  CmpItemKindText = { fg = c.aurora.green },
+
   CmpItemKindStructure = { fg = c.frost.artic_water },
   CmpItemKindType = { fg = c.frost.ice },
   CmpItemKindKeyword = { fg = c.frost.polar_water },

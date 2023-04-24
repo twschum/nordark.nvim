@@ -7,6 +7,7 @@ function defaluts.highlights()
   local options = require("nord.config").options
   local global_bg = utils.make_global_bg()
   local transparent_bg = utils.make_global_bg(true)
+  -- TODO to handle borders option, set value of c.line
 
   return {
     ColorColumn = { bg = c.polar_night.black2 }, -- used for the columns set with 'colorcolumn'
@@ -19,17 +20,14 @@ function defaluts.highlights()
     EndOfBuffer = { fg = c.polar_night.bright }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     Error = { fg = c.aurora.red, bg = c.polar_night.origin },
     ErrorMsg = { fg = c.snow_storm.origin, bg = c.aurora.red }, -- error messages on the command line
-    VertSplit = { fg = options.borders and c.lines or c.polar_night.origin, bg = c.none }, -- the column separating vertically split windows
-    WinSeparator = {
-      fg = options.borders and c.lines or c.polar_night.origin,
-      bg = c.none,
-    }, -- Separators between window splits.
+    VertSplit = { fg = c.lines, bg = global_bg }, -- the column separating vertically split windows
+    WinSeparator = { fg = c.lines, bg = c.none }, -- Separators between window splits.
     Folded = { fg = c.snow_storm.brightest, bg = c.polar_night.bright }, -- line used for closed folds
     FoldColumn = { fg = c.polar_night.brightest, bg = global_bg }, -- 'foldcolumn'
     SignColumn = { fg = c.polar_night.bright, bg = transparent_bg }, -- column where |signs| are displayed
     -- Substitute = { link = "Search" }, -- |:substitute| replacement text highlighting
-    LineNr = { fg = c.polar_night.brightest, bg = c.none }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    CursorLineNr = { fg = c.snow_storm.origin, bold = true }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    LineNr = { fg = c.grey, bg = c.none }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    CursorLineNr = { fg = c.white }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen = { bg = c.polar_night.brightest, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = c.snow_storm.origin }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea = {}, -- Area for messages and cmdline
