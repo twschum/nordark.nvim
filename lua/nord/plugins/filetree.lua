@@ -8,20 +8,22 @@ function filetree.highlights()
   local global_bg = utils.make_global_bg()
   return {
     -- NvimTree
-    NvimTreeNormal = { fg = c.snow_storm.origin },
+    NvimTreeNormal = { fg = c.snow_storm.origin, bg = c.polar_night.darker },
     NvimTreeWinSeparator = { fg = config.options.borders and c.polar_night.bright or c.none },
     NvimTreeNormalNC = { fg = c.snow_storm.origin },
-    NvimTreeRootFolder = { fg = c.snow_storm.origin, bold = true },
+    NvimTreeRootFolder = { fg = c.folder_bg, bold = true },
     NvimTreeGitDirty = { fg = c.aurora.yellow },
     NvimTreeGitNew = { fg = c.aurora.green },
     NvimTreeGitDeleted = { fg = c.aurora.red },
-    NvimTreeGitIgnored = { fg = c.polar_night.light },
-    NvimTreeSpecialFile = { fg = c.aurora.yellow, underline = true },
+    NvimTreeGitIgnored = { fg = c.grey_fg },
+    NvimTreeSpecialFile = { fg = c.snow_storm.origin, underline = true },
     NvimTreeIndentMarker = { fg = c.frost.artic_water },
     NvimTreeImageFile = { fg = c.snow_storm.origin },
-    NvimTreeSymlink = { fg = c.frost.artic_water },
+    NvimTreeSymlink = { fg = c.frost.polar_water },
     NvimTreeFolderIcon = { fg = c.frost.artic_water },
     NvimTreeOpenedFolderName = { fg = c.snow_storm.origin },
+	NvimTreeGitRenamed = { fg = c.aurora.yellow },
+	NvimTreeGitStaged = { fg = c.frost.artic_water },
 
     NeoTreeDimText = { fg = c.polar_night.brightest },
     NeoTreeDirectoryIcon = { fg = c.frost.artic_water },

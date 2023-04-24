@@ -84,12 +84,12 @@ Enable the colorscheme:
 
 >vim
     " Vim Script
-    colorscheme nord
+    colorscheme nordark
 <
 
 >lua
     -- Lua
-    vim.cmd[[colorscheme nord]]
+    vim.cmd[[colorscheme nordark]]
 <
 
 
@@ -97,7 +97,7 @@ Enable the colorscheme:
 
 
   ❗️ configuration needs to be set **BEFORE** loading the color scheme with
-  `colorscheme nord`
+  `colorscheme nordark`
 Nord.nvim will use the default options, unless you call `setup`.
 
 >lua
@@ -117,14 +117,14 @@ Nord.nvim will use the default options, unless you call `setup`.
         keywords = {},
         functions = {},
         variables = {},
-    
+
         -- To customize lualine/bufferline
         bufferline = {
           current = {},
           modified = { italic = true },
         },
       },
-    
+
       -- colorblind mode
       -- see https://github.com/EdenEast/nightfox.nvim#colorblind
       -- simulation mode has not been implemented yet.
@@ -137,7 +137,7 @@ Nord.nvim will use the default options, unless you call `setup`.
           tritan = 0.0,
         },
       }
-    
+
       --- You can override specific highlights to use other groups or a hex color
       --- function will be called with all highlights and the colorScheme table
       on_highlights = function(highlights, colors) end,

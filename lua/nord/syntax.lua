@@ -12,7 +12,7 @@ function base.highlights()
     Character = { fg = c.aurora.green }, --  a character constant: 'c', '\n'
     Conditional = { fg = c.frost.artic_water }, --  if, then, else, endif, switch, etc.
     Constant = { fg = c.snow_storm.origin }, -- (preferred) any constant
-    Comment = vim.tbl_extend("force", { fg = c.polar_night.light }, options.styles.comments), -- any comment
+    Comment = vim.tbl_extend("force", { fg = c.grey_fg }, options.styles.comments), -- any comment
     Debug = { fg = c.snow_storm.origin }, --    debugging statements
     Define = { fg = c.frost.artic_water }, --   preprocessor #define
     Delimiter = { fg = c.snow_storm.brightest }, --  character that needs attention

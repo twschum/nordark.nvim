@@ -8,7 +8,7 @@ function treesitter.highlights()
 
   return {
     -- Misc
-    ["@comment"] = vim.tbl_extend("force", { fg = c.polar_night.light }, options.styles.comments), --  line and block comments
+    ["@comment"] = vim.tbl_extend("force", { fg = c.grey_fg }, options.styles.comments), --  line and block comments
     ["@error"] = utils.make_error(c.aurora.red), --  syntax/parser errors
     -- ["@none"]     --  completely disable the highlight
     ["@preproc"] = { fg = c.frost.artic_water }, --  various preprocessor directives & shebangs
