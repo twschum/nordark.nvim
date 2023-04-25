@@ -19,9 +19,9 @@ function defaluts.highlights()
     Directory = { fg = c.frost.ice }, -- directory names (and other special names in listings)
     EndOfBuffer = { fg = c.polar_night.bright }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     Error = { fg = c.aurora.red, bg = c.polar_night.origin },
-    ErrorMsg = { fg = c.snow_storm.origin, bg = c.aurora.red }, -- error messages on the command line
-    VertSplit = { fg = c.lines, bg = global_bg }, -- the column separating vertically split windows
-    WinSeparator = { fg = c.lines, bg = global_bg }, -- Separators between window splits.
+    ErrorMsg = { fg = c.aurora.red, bg = c.backlight.red1 }, -- error messages on the command line
+    VertSplit = { fg = c.line, bg = global_bg }, -- the column separating vertically split windows
+    WinSeparator = { fg = c.line, bg = global_bg }, -- Separators between window splits.
     Folded = { fg = c.snow_storm.brightest, bg = c.polar_night.bright }, -- line used for closed folds
     FoldColumn = { fg = c.polar_night.brightest, bg = global_bg }, -- 'foldcolumn'
     SignColumn = { fg = c.polar_night.bright, bg = transparent_bg }, -- column where |signs| are displayed
@@ -58,12 +58,15 @@ function defaluts.highlights()
     TabLineSel = { fg = c.frost.ice, bg = c.polar_night.brightest }, -- tab pages line, active tab page label
     Title = { fg = c.snow_storm.origin, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
     Visual = { fg = c.none, bg = c.polar_night.brighter }, -- Visual mode selection
-    VisualNOS = { fg = c.none, bg = c.polar_night.brighter }, -- Visual mode selection when vim is "Not Owning the Selection".
-    WarningMsg = { fg = c.polar_night.origin, bg = c.aurora.yellow }, -- warning messages
+    WarningMsg = { fg = c.aurora.yellow, bg = c.backlight.yellow1 }, -- warning messages
     Whitespace = { fg = c.polar_night.brighter }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
     WildMenu = { fg = c.frost.ice, bg = c.polar_night.bright }, -- current match in 'wildmenu' completion
     qfLineNr = { fg = c.frost.artic_water },
     qfFileName = { fg = c.frost.ice },
+
+    -- DiffAdd = { bg = c.backlight.green1 }, -- diff mode: Added line
+    -- DiffChange = { bg = c.backlight.yellow1 }, --  diff mode: Changed line
+    -- DiffDelete = { bg = c.backlight.red1 }, -- diff mode: Deleted line
     DiffAdd = utils.make_diff(c.aurora.green), -- diff mode: Added line
     DiffChange = utils.make_diff(c.aurora.yellow), --  diff mode: Changed line
     DiffDelete = utils.make_diff(c.aurora.red), -- diff mode: Deleted line
@@ -75,6 +78,17 @@ function defaluts.highlights()
     healthError = { fg = c.aurora.red },
     healthSuccess = { fg = c.aurora.green },
     healthWarning = { fg = c.aurora.yellow },
+
+    -- BacklightRed10 = { fg = c.aurora.red, bg = utils.darken(c.aurora.red, 0.1) },
+    -- BacklightRed20 = { fg = c.aurora.red, bg = utils.darken(c.aurora.red, 0.2) },
+    -- BacklightRed30 = { fg = c.aurora.red, bg = utils.darken(c.aurora.red, 0.3) },
+    -- BacklightYellow10 = { fg = c.aurora.yellow, bg = utils.darken(c.aurora.yellow, 0.1) },
+    -- BacklightYellow20 = { fg = c.aurora.yellow, bg = utils.darken(c.aurora.yellow, 0.2) },
+    -- BacklightYellow30 = { fg = c.aurora.yellow, bg = utils.darken(c.aurora.yellow, 0.3) },
+    -- BacklightRed10 = { fg = c.aurora.red, bg = utils.darken(c.aurora.red, 0.1) },
+    -- BacklightGreen20 = { fg = c.aurora.green, bg = utils.darken(c.aurora.green, 0.2) },
+    -- BacklightGreen30 = { fg = c.aurora.green, bg = utils.darken(c.aurora.green, 0.3) },
+
   }
 end
 
