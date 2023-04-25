@@ -12,7 +12,7 @@ function filetree.highlights()
     NvimTreeWinSeparator = { fg = config.options.borders and c.polar_night.bright or c.none },
     NvimTreeNormalNC = { fg = c.snow_storm.origin },
     NvimTreeRootFolder = { fg = c.folder_bg, bold = true },
-    NvimTreeGitDirty = { fg = c.aurora.yellow },
+    NvimTreeGitDirty = { fg = c.aurora.yellow, italic = true },
     NvimTreeGitNew = { fg = c.aurora.green },
     NvimTreeGitDeleted = { fg = c.aurora.red },
     NvimTreeGitIgnored = { fg = c.grey_fg },
@@ -23,8 +23,8 @@ function filetree.highlights()
     NvimTreeImageFile = { fg = c.snow_storm.origin },
     NvimTreeSymlink = { fg = c.frost.polar_water },
     NvimTreeFolderIcon = { fg = c.frost.artic_water },
-    NvimTreeOpenedFolderName = { fg = c.snow_storm.origin },
-    NvimTreeCursorLine = { bg = c.snow_storm.origin },
+    --NvimTreeOpenedFolderName = { bold = true },
+    NvimTreeCursorLine = { bg = c.polar_night.brighter },
     NvimTreeWindowPicker = { fg = c.aurora.red, bg = c.black2 },
 
     -- NeoTree

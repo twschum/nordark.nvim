@@ -1,5 +1,8 @@
 local colors = {}
 
+-- To view loaded highlight groups
+-- :e runtime syntax/hitest.vim
+
 local defaults = {
     polar_night   = {
         darker    = "#20242D", -- darker_black 1% darker than the origin

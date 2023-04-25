@@ -21,6 +21,10 @@ function git.highlights()
     GitSignsDeleteLn = { fg = c.aurora.red },
     GitSignsCurrentLineBlame = { fg = c.polar_night.brightest, bold = false },
 
+    GitSignsAddInline = { fg = c.aurora.green, bg = c.backlight.green2 },
+    GitSignsChangeInline = { fg = c.aurora.yellow, bg = c.backlight.yellow2 },
+    GitSignsDeleteInline = { fg = c.aurora.red, bg = c.backlight.red2 },
+
     -- TODO diffview
   }
 end
