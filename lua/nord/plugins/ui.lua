@@ -5,10 +5,12 @@ local c = require("nord.colors").palette
 function ui.highlights()
   return {
     -- folke/which-key.nvim
-    WhichKey = { fg = c.frost.ice, bold = true },
+    WhichKey = { fg = c.blue },
     WhichKeyGroup = { fg = c.frost.artic_water },
     WhichKeyDesc = { fg = c.snow_storm.origin },
-    WhichKeyFloat = { bg = c.polar_night.bright },
+    WhichKeyFloat = { bg = c.polar_night.black2 },
+    WhichKeySeparator = { fg = c.light_grey },
+    WhichKeyValue = { fg = c.aurora.green },
 
     -- SmiteshP/nvim-navic
     NavicIconsFile = { link = "@include" },

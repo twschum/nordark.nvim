@@ -1,5 +1,4 @@
 local c = require("nord.colors").palette
-local utils = require("nord.utils")
 
 local nordark = {}
 
@@ -7,7 +6,7 @@ nordark.normal = {
     a = { fg = c.polar_night.origin, bg = c.frost.artic_water, bold = true },
     b = { fg = c.grey_fg2, bg = c.polar_night.black2 },
     c = { fg = c.snow_storm.origin, bg = c.statusline_bg },
-    x = { fg = c.polar_night.brightest, bg = c.statusline_bg },
+    x = { fg = c.white, bg = c.statusline_bg },
 }
 
 nordark.insert = {
@@ -27,9 +26,9 @@ nordark.command = {
 }
 
 nordark.inactive = {
-    a = { fg = c.polar_night.brightest, bg = c.statusline_bg },
-    b = { fg = c.polar_night.brightest, bg = c.statusline_bg },
-    c = { fg = c.polar_night.brightest, bg = c.statusline_bg },
+    a = { fg = c.white, bg = c.polar_night.black2 },
+    b = { fg = c.white, bg = c.polar_night.black2 },
+    c = { fg = c.white, bg = c.polar_night.black2 },
 }
 
 return nordark

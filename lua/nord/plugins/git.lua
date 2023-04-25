@@ -20,6 +20,8 @@ function git.highlights()
     GitSignsDeleteNr = { fg = c.aurora.red },
     GitSignsDeleteLn = { fg = c.aurora.red },
     GitSignsCurrentLineBlame = { fg = c.polar_night.brightest, bold = false },
+
+    -- TODO diffview
   }
 end
 

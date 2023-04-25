@@ -41,7 +41,7 @@ function lazy.highlights()
   LazyReasonSource = { fg = c.cyan },
   LazyReasonImport = { fg = c.white },
   LazyProgressDone = { fg = c.aurora.green },
-    }
+}
 
 end
 

@@ -7,7 +7,6 @@ function defaluts.highlights()
   local options = require("nord.config").options
   local global_bg = utils.make_global_bg()
   local transparent_bg = utils.make_global_bg(true)
-  -- TODO to handle borders option, set value of c.line
 
   return {
     ColorColumn = { bg = c.polar_night.black2 }, -- used for the columns set with 'colorcolumn'
@@ -30,15 +29,15 @@ function defaluts.highlights()
     CursorLineNr = { fg = c.white }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen = { bg = c.polar_night.brightest, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = c.snow_storm.origin }, -- 'showmode' message (e.g., "-- INSERT -- ")
-    MsgArea = {}, -- Area for messages and cmdline
+    MsgArea = { bg = c.black2 }, -- Area for messages and cmdline
     MsgSeparator = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
-    MoreMsg = { fg = c.frost.ice }, -- |more-prompt|
+    MoreMsg = { fg = c.aurora.green }, -- |more-prompt|
     NonText = { fg = c.polar_night.brighter }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal = { fg = c.snow_storm.origin, bg = transparent_bg }, -- normal text
-    NormalFloat = { fg = c.snow_storm.origin, bg = global_bg }, -- Normal text in floating windows.
-    FloatBorder = { fg = c.polar_night.brightest, bg = global_bg }, -- Borders of floating windows
+    NormalFloat = { fg = c.snow_storm.origin, bg = c.polar_night.darker }, -- Normal text in floating windows.
+    FloatBorder = { fg = c.polar_night.brightest, bg = c.polar_night.darker }, -- Borders of floating windows
     Pmenu = { fg = c.snow_storm.origin, bg = c.polar_night.bright }, -- Popup menu: normal item.
-    PmenuSel = { fg = c.snow_storm.origin, bg = c.polar_night.brighter }, -- Popup menu: selected item.
+    PmenuSel = { bg = c.polar_night.brighter }, -- Popup menu: selected item.
     PmenuSbar = { fg = c.snow_storm.origin, bg = c.polar_night.brighter }, -- Popup menu: scrollbar.
     PmenuThumb = { fg = c.frost.ice, bg = c.polar_night.brightest }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = c.snow_storm.origin }, -- |hit-enter| prompt and yes/no questions
@@ -53,9 +52,9 @@ function defaluts.highlights()
     SpellRare = { sp = c.frost.actic_water, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     StatusLine = { fg = c.frost.ice, bg = c.polar_night.brightest }, -- status line of current window
     StatusLineNC = { fg = c.snow_storm.origin, bg = c.polar_night.brighter }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-    TabLine = { fg = c.snow_storm.origin, bg = c.fg_gutter }, -- tab pages line, not active tab page label
-    TabLineFill = { fg = c.snow_storm.origin, bg = c.polar_night.bright }, -- tab pages line, where there are no labels
-    TabLineSel = { fg = c.frost.ice, bg = c.polar_night.brightest }, -- tab pages line, active tab page label
+    TabLine = { fg = c.white, bg = c.polar_night.black2 }, -- tab pages line, not active tab page label
+    TabLineFill = { fg = c.polar_night.bright, bg = c.polar_night.black2 }, -- tab pages line, where there are no labels
+    TabLineSel = { fg = c.snow_storm.origin, bold = true, bg = c.polar_night.brighter }, -- tab pages line, active tab page label
     Title = { fg = c.snow_storm.origin, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
     Visual = { fg = c.none, bg = c.polar_night.brighter }, -- Visual mode selection
     WarningMsg = { fg = c.aurora.yellow, bg = c.backlight.yellow1 }, -- warning messages
@@ -78,16 +77,6 @@ function defaluts.highlights()
     healthError = { fg = c.aurora.red },
     healthSuccess = { fg = c.aurora.green },
     healthWarning = { fg = c.aurora.yellow },
-
-    -- BacklightRed10 = { fg = c.aurora.red, bg = utils.darken(c.aurora.red, 0.1) },
-    -- BacklightRed20 = { fg = c.aurora.red, bg = utils.darken(c.aurora.red, 0.2) },
-    -- BacklightRed30 = { fg = c.aurora.red, bg = utils.darken(c.aurora.red, 0.3) },
-    -- BacklightYellow10 = { fg = c.aurora.yellow, bg = utils.darken(c.aurora.yellow, 0.1) },
-    -- BacklightYellow20 = { fg = c.aurora.yellow, bg = utils.darken(c.aurora.yellow, 0.2) },
-    -- BacklightYellow30 = { fg = c.aurora.yellow, bg = utils.darken(c.aurora.yellow, 0.3) },
-    -- BacklightRed10 = { fg = c.aurora.red, bg = utils.darken(c.aurora.red, 0.1) },
-    -- BacklightGreen20 = { fg = c.aurora.green, bg = utils.darken(c.aurora.green, 0.2) },
-    -- BacklightGreen30 = { fg = c.aurora.green, bg = utils.darken(c.aurora.green, 0.3) },
 
   }
 end
