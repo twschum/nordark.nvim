@@ -1,8 +1,8 @@
-# 🖌️ nord.nvim
+# 🖌️ nordark.nvim
 
-Neovim theme using the [Nord palette](https://www.nordtheme.com/) that tries to
-be as close as possible to the [official vim theme](https://github.com/arcticicestudio/nord-vim/)
-and [the official vscode theme](https://github.com/arcticicestudio/nord-visual-studio-code).
+Neovim theme using a darker selection of polar night colors from the [Nord palette](https://www.nordtheme.com/). It uses the slightly darker #232730 as the base color to provide stronger contrast than the true Nord theme.
+
+The pallate uses extended colors inspired by [NvChad/base46](https://github.com/NvChad/base46)
 
 **This colorscheme still under developement, please, keep calm and report issues**
 
