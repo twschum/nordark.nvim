@@ -3,6 +3,14 @@ local utils = require("nord.utils")
 
 local treesitter = {}
 
+-- TODO TODO NOTE XXX FIXME HACK
+-- TODO @lang.help -> @lang.vimdoc
+-- TODO url stuff
+-- TODO imports
+-- All the new stuff since ~Oct 2022
+-- Deviated from gbprod/nord.nvim
+-- comment
+
 function treesitter.highlights()
   local options = require("nord.config").options
 

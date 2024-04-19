@@ -1,10 +1,11 @@
 local config = {}
 
 local defaults = {
-  transparent = false, -- Enable this to disable setting the background color
-  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
-  diff = { mode = "bg" }, -- [bg|fg]
+  transparent = false,      -- Enable this to disable setting the background color
+  terminal_colors = true,   -- Configure the colors used when opening a `:terminal` in Neovim
+  diff = { mode = "bg" },   -- [bg|fg]
   borders = true,
+  subtle_cursorline = true, -- if true, only highlights line number, not whole cursor line
   errors = { mode = "bg" }, -- [bg|fg|none]
   -- Value is any valid attr-list value for `:help nvim_set_hl`
   styles = {
@@ -30,7 +31,8 @@ local defaults = {
     },
   },
   --- You can override specific highlights to use other groups or a hex color
-  on_highlights = function(highlights, colors) end,
+  on_highlights = function(highlights, colors)
+  end,
 }
 
 config.options = {}

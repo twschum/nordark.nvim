@@ -44,6 +44,8 @@ function cmp.highlights()
     CmpItemKindOperator = { fg = c.snow_storm.brighter },
     CmpItemKindTypeParameter = { fg = c.frost.ice },
     CmpItemKindCopilot = { fg = c.aurora.green },
+
+    CodeiumSuggestion = { fg = c.polar_night.light },
   }
 end
 
