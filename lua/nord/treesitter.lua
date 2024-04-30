@@ -33,18 +33,19 @@ function treesitter.highlights()
     ["@punctuation.special"] = { link = "@markup.list" },         -- @deprecated
 
     -- Literals
-    ["@string"] = { fg = c.aurora.green },                 --  string literals
-    ["@string.regexp"] = { fg = c.aurora.yellow },         --  regular expressions
-    ["@string.regex"] = { link = "@string.regexp" },       -- @deprecated
-    ["@string.escape"] = { fg = c.aurora.yellow },         --  escape sequences
-    ["@markup.link.label"] = { fg = c.aurora.yellow },     --  other special strings (e.g. dates)
-    ["@string.special"] = { link = "@markup.link.label" }, -- @deprecated
-    ["@character"] = { fg = c.aurora.green },              --  character literals
-    ["@character.special"] = { fg = c.aurora.yellow },     --  special characters (e.g. wildcards)
-    ["@boolean"] = { fg = c.frost.artic_water },           --  boolean literals
-    ["@number"] = { fg = c.aurora.purple },                --  numeric literals
-    ["@number.float"] = { fg = c.aurora.purple },          --  floating-point number literals
-    ["@float"] = { link = "@number.float" },               -- @deprecated
+    ["@string"] = { fg = c.aurora.green },                                                              --  string literals
+    ["@string.regexp"] = { fg = c.aurora.yellow },                                                      --  regular expressions
+    ["@string.regex"] = { link = "@string.regexp" },                                                    -- @deprecated
+    ["@string.escape"] = { fg = c.aurora.yellow },                                                      --  escape sequences
+    ["@string.special"] = { fg = c.aurora.yellow },                                                     -- @deprecated
+    ["@string.special.url"] = { fg = c.frost.polar_water, underline = true, sp = c.frost.polar_water }, -- @deprecated
+    ["@string.special.url.comment"] = { fg = c.comment_special, underline = true, sp = c.comment_special },
+    ["@character"] = { fg = c.aurora.green },                                                           --  character literals
+    ["@character.special"] = { fg = c.aurora.yellow },                                                  --  special characters (e.g. wildcards)
+    ["@boolean"] = { fg = c.frost.artic_water },                                                        --  boolean literals
+    ["@number"] = { fg = c.aurora.purple },                                                             --  numeric literals
+    ["@number.float"] = { fg = c.aurora.purple },                                                       --  floating-point number literals
+    ["@float"] = { link = "@number.float" },                                                            -- @deprecated
 
     -- Functions
     ["@function"] = vim.tbl_extend("force", { fg = c.frost.ice }, options.styles.functions), --  function definitions
@@ -56,7 +57,7 @@ function treesitter.highlights()
     ["@function.method.call"] = { fg = c.frost.ice },                                        --  method calls
     ["@method.call"] = { link = "@function.method.call" },                                   -- @deprecated
     ["@constructor"] = { fg = c.frost.ice },                                                 --  constructor calls and definitions
-    ["@variable.parameter"] = { fg = c.frost.ice },                                          --  parameters of a function
+    ["@variable.parameter"] = { fg = c.snow_storm.origin },                                  --  parameters of a function
     ["@parameter"] = { link = "@variable.parameter" },                                       -- @deprecated
 
     -- Keywords
@@ -65,6 +66,7 @@ function treesitter.highlights()
     ["@keyword.operator"] = vim.tbl_extend("force", { fg = c.frost.artic_water }, options.styles.keywords),    --  operators that are English words (e.g. `and` / `or`)
     ["@keyword.return"] = vim.tbl_extend("force", { fg = c.frost.artic_water }, options.styles.keywords),      --  keywords like `return` and `yield`
     ["@keyword.conditional"] = vim.tbl_extend("force", { fg = c.frost.artic_water }, options.styles.keywords), --  keywords related to conditionals (e.g. `if` / `else`)
+    ["@keyword.coroutine"] = vim.tbl_extend("force", { fg = c.frost.artic_water }, options.styles.keywords),   --  keywords related to conditionals (e.g. `if` / `else`)
     ["@conditional"] = { link = "@keyword.conditional" },                                                      -- @deprecated
     ["@keyword.repeat"] = vim.tbl_extend("force", { fg = c.frost.artic_water }, options.styles.keywords),      --  keywords related to loops (e.g. `for` / `while`)
     ["@repeat"] = { link = "@keyword.repeat" },                                                                -- @deprecated
@@ -87,6 +89,7 @@ function treesitter.highlights()
     ["@variable.member"] = { fg = c.snow_storm.origin }, --  object and struct fields
     ["@field"] = { link = "@field" },                    -- @deprecated
     ["@property"] = { fg = c.snow_storm.origin },        --  similar to `@field`
+    ["@structure"] = { link = "Structure" },
 
     -- Identifiers
     ["@variable"] = vim.tbl_extend("force", { fg = c.snow_storm.origin }, options.styles.variables), --  various variable names
@@ -94,47 +97,49 @@ function treesitter.highlights()
     ["@constant"] = { fg = c.snow_storm.origin },                                                    --  constant identifiers
     ["@constant.builtin"] = { fg = c.frost.artic_water },                                            --  built-in constant values
     ["@constant.macro"] = { fg = c.frost.artic_water },                                              --  constants defined by the preprocessor
-    ["@module"] = { fg = c.snow_storm.origin },                                                      --  modules or namespaces
+    ["@module"] = { fg = c.snow_storm.darkened },                                                    --  modules or namespaces
     ["@namespace"] = { link = "@module" },                                                           -- @deprecated
     ["@string.special.symbol"] = { fg = c.snow_storm.origin },                                       --  symbols or atoms
     ["@symbol"] = { link = "@string.special.symbol" },                                               -- @deprecated
 
     -- Text
-    ["@text"] = { fg = c.snow_storm.origin },                                              -- @deprecated
-    ["@markup.strong"] = { bold = true },                                                  --  bold text
-    ["@text.strong"] = { link = "@markup.strong" },                                        -- @deprecated
-    ["@markup.italic"] = { italic = true },                                                --  text with emphasis
-    ["@text.emphasis"] = { link = "@markup.italic" },                                      -- @deprecated
-    ["@markup.underline"] = { underline = true },                                          --  underlined text
-    ["@text.underline"] = { link = "@markup.underline" },                                  -- @deprecated
-    ["@markup.strikethrough"] = { strikethrough = true },                                  --  strikethrough text
-    ["@text.strike"] = { link = "@markup.strikethrough" },                                 -- @deprecated
-    ["@markup.heading"] = { fg = c.frost.ice, bold = true },                               --  text that is part of a title
-    ["@text.title"] = { link = "@markup.heading" },                                        -- @deprecated
-    ["@markup.raw"] = { fg = c.frost.polar_water },                                        --  literal or verbatim text
-    ["@text.literal"] = { link = "@markup.raw" },                                          -- @deprecated
-    ["@markup.link.url"] = { fg = c.aurora.green, underline = true, sp = c.aurora.green }, --  URIs (e.g. hyperlinks)
-    ["@text.uri"] = { link = "@markup.link.url" },                                         -- @deprecated
-    ["@markup.math"] = { fg = c.frost.polar_water },                                       --  math environments (e.g. `$ ... $` in LaTeX)
-    ["@text.math"] = { link = "@markup.math" },                                            -- @deprecated
-    ["@markup.environment"] = { fg = c.frost.polar_water },                                --  text environments of markup languages
-    ["@text.environment"] = { link = "@markup.environment" },                              -- @deprecated
-    ["@markup.environment.name"] = { fg = c.frost.artic_water },                           --  text indicating the type of an environment
-    ["@text.environment.name"] = { link = "@markup.environment.name" },                    -- @deprecated
-    ["@markup.link"] = { fg = c.frost.polar_water },                                       --  text references, footnotes, citations, etc.
-    ["@text.reference"] = { link = "@markup.link" },                                       -- @deprecated
-    ["@comment.todo"] = { fg = c.aurora.yellow },                                          --  todo notes
-    ["@text.todo"] = { link = "@comment.todo" },                                           -- @deprecated
-    ["@comment.note"] = { fg = c.frost.artic_water },                                      --  info notes
-    ["@text.note"] = { link = "@comment.note" },                                           -- @deprecated
-    ["@comment.warning"] = { fg = c.aurora.yellow },                                       --  warning notes
-    ["@text.warning"] = { link = "@comment.warning" },                                     -- @deprecated
-    ["@comment.error"] = { fg = c.aurora.red },                                            --  danger/error notes
-    ["@text.danger"] = { link = "@comment.error" },                                        -- @deprecated
-    ["@text.diff.add"] = { link = "DiffAdd" },                                             --  added text (for diff files)
-    ["@text.diff.delete"] = { link = "DiffDelete" },                                       --  deleted text (for diff files)
-    ["@diff.plus"] = { link = "DiffAdd" },                                                 --  added text (for diff files)
-    ["@diff.minus"] = { link = "DiffDelete" },                                             --  deleted text (for diff files)
+    ["@text"] = { fg = c.snow_storm.origin },                           -- @deprecated
+    ["@markup.strong"] = { bold = true },                               --  bold text
+    ["@text.strong"] = { link = "@markup.strong" },                     -- @deprecated
+    ["@markup.italic"] = { italic = true },                             --  text with emphasis
+    ["@text.emphasis"] = { link = "@markup.italic" },                   -- @deprecated
+    ["@markup.underline"] = { underline = true },                       --  underlined text
+    ["@text.underline"] = { link = "@markup.underline" },               -- @deprecated
+    ["@markup.strikethrough"] = { strikethrough = true },               --  strikethrough text
+    ["@text.strike"] = { link = "@markup.strikethrough" },              -- @deprecated
+    ["@markup.heading"] = { fg = c.frost.ice, bold = true },            --  text that is part of a title
+    ["@text.title"] = { link = "@markup.heading" },                     -- @deprecated
+    ["@markup.raw"] = { fg = c.frost.polar_water },                     --  literal or verbatim text
+    ["@text.literal"] = { link = "@markup.raw" },                       -- @deprecated
+    --["@markup.link.url"] = { fg = c.aurora.green, underline = true, sp = c.aurora.green }, --  URIs (e.g. hyperlinks)
+    ["@markup.link"] = { fg = c.frost.polar_water },                    --  text references, footnotes, citations, etc.
+    ["@markup.link.url"] = { link = "@string.special.url" },            --  URIs (e.g. hyperlinks)
+    ["@markup.link.label"] = { link = "@string.special.url" },          -- link, reference descriptions
+    ["@text.uri"] = { link = "@markup.link" },                          -- @deprecated
+    ["@markup.math"] = { fg = c.frost.polar_water },                    --  math environments (e.g. `$ ... $` in LaTeX)
+    ["@text.math"] = { link = "@markup.math" },                         -- @deprecated
+    ["@markup.environment"] = { fg = c.frost.polar_water },             --  text environments of markup languages
+    ["@text.environment"] = { link = "@markup.environment" },           -- @deprecated
+    ["@markup.environment.name"] = { fg = c.frost.artic_water },        --  text indicating the type of an environment
+    ["@text.environment.name"] = { link = "@markup.environment.name" }, -- @deprecated
+    ["@text.reference"] = { link = "@markup.link" },                    -- @deprecated
+    ["@comment.todo"] = { fg = c.aurora.yellow },                       --  todo notes
+    ["@text.todo"] = { link = "@comment.todo" },                        -- @deprecated
+    ["@comment.note"] = { fg = c.frost.artic_water },                   --  info notes
+    ["@text.note"] = { link = "@comment.note" },                        -- @deprecated
+    ["@comment.warning"] = { fg = c.aurora.yellow },                    --  warning notes
+    ["@text.warning"] = { link = "@comment.warning" },                  -- @deprecated
+    ["@comment.error"] = { fg = c.aurora.red },                         --  danger/error notes
+    ["@text.danger"] = { link = "@comment.error" },                     -- @deprecated
+    ["@text.diff.add"] = { link = "DiffAdd" },                          --  added text (for diff files)
+    ["@text.diff.delete"] = { link = "DiffDelete" },                    --  deleted text (for diff files)
+    ["@diff.plus"] = { link = "DiffAdd" },                              --  added text (for diff files)
+    ["@diff.minus"] = { link = "DiffDelete" },                          --  deleted text (for diff files)
     ["@diff.delta"] = { link = "DiffChange" },
 
     -- Tags
@@ -156,27 +161,60 @@ function treesitter.highlights()
     ["@attribute.phpdoc"] = { fg = c.frost.artic_water },
 
     -- LSP Semantic Token Groups
+    -- NOTE: maybe add these with distinct highlights?
+    -- ["@lsp.typemod.variable.globalScope"] (global variables)
+    ["@lsp.type.boolean"] = { link = "@boolean" },
+    ["@lsp.type.builtinType"] = { link = "@type.builtin" },
     ["@lsp.type.class"] = { link = "@type" },
-    ["@lsp.type.comment"] = { link = "@comment" },
+    ["@lsp.type.comment"] = {},  -- don't let lsp comment override treesitter identifying tags and URLs
+    ["@lsp.type.decorator"] = { link = "@attribute" },
+    ["@lsp.type.deriveHelper"] = { link = "@attribute" },
     ["@lsp.type.enum"] = { link = "@type" },
     ["@lsp.type.enumMember"] = { link = "@constant" },
+    ["@lsp.type.escapeSequence"] = { link = "@string.escape" },
     ["@lsp.type.field"] = { link = "@field" },
+    ["@lsp.type.formatSpecifier"] = { link = "@markup.list" },
     ["@lsp.type.function"] = { link = "@function" },
-    ["@lsp.type.interface"] = { link = "@type" },
+    ["@lsp.type.generic"] = { link = "@variable" },
+    ["@lsp.type.interface"] = { link = "@type" }, -- TODO maybe lighter than type?
     ["@lsp.type.keyword"] = { link = "@keyword" },
+    ["@lsp.type.lifetime"] = { link = "@keyword.storage" },
     ["@lsp.type.method"] = { link = "@method" },
-    ["@lsp.type.namespace"] = { link = "@namespace" },
-    ["@lsp.type.parameter"] = { link = "@parameter" },
+    ["@lsp.type.namespace"] = { link = "@module" }, -- TODO but not in imports?
+    ["@lsp.type.number"] = { link = "@number" },
+    ["@lsp.type.operator"] = { link = "@operator" },
+    ["@lsp.type.parameter"] = { link = "@variable.parameter" },
     ["@lsp.type.property"] = { link = "@property" },
+    ["@lsp.type.selfKeyword"] = { link = "@variable.builtin" },
+    ["@lsp.type.selfTypeKeyword"] = { link = "@variable.builtin" },
+    ["@lsp.type.string"] = { link = "@string" },
     ["@lsp.type.struct"] = { link = "@structure" },
+    ["@lsp.type.typeAlias"] = { link = "@type.definition" },
     ["@lsp.type.typeParameter"] = { link = "@parameter" },
+    ["@lsp.type.unresolvedReference"] = { undercurl = true, sp = c.error },
     ["@lsp.type.variable"] = {}, -- use treesitter styles for regular variables
-    ["@lsp.typemod.method.defaultLibrary"] = { link = "@function.builtin" },
+    ["@lsp.typemod.class.defaultLibrary"] = { link = "@type.builtin" },
+    ["@lsp.typemod.enum.defaultLibrary"] = { link = "@type.builtin" },
+    ["@lsp.typemod.enumMember.defaultLibrary"] = { link = "@constant.builtin" },
     ["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
+    ["@lsp.typemod.keyword.async"] = { link = "@keyword.coroutine" },
+    ["@lsp.typemod.keyword.injected"] = { link = "@keyword" },
+    ["@lsp.typemod.macro.defaultLibrary"] = { link = "@function.builtin" },
+    ["@lsp.typemod.method.defaultLibrary"] = { link = "@function.builtin" },
     ["@lsp.typemod.operator.injected"] = { link = "@operator" },
     ["@lsp.typemod.string.injected"] = { link = "@string" },
+    ["@lsp.typemod.struct.defaultLibrary"] = { link = "@type.builtin" },
+    ["@lsp.typemod.type.defaultLibrary"] = { fg = c.blue },
+    ["@lsp.typemod.typeAlias.defaultLibrary"] = { fg = c.blue },
+    ["@lsp.typemod.variable.callable"] = { link = "@function" },
     ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
     ["@lsp.typemod.variable.injected"] = { link = "@variable" },
+    ["@lsp.typemod.variable.static"] = { link = "@constant" },
+    ["@lsp.typemod.variable.globalScope"] = { fg = c.aurora.purple }, -- highlight globals!
+
+    -- Python
+    ["@lsp.type.namespace.python"] = { link = "@namespace" },
+
   }
 end
 

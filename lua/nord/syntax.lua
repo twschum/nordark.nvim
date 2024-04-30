@@ -41,7 +41,7 @@ function base.highlights()
     Structure = { fg = c.frost.artic_water },                                                     --  struct, union, enum, etc.
     Tag = { fg = c.snow_storm.origin },                                                           --    you can use CTRL-] on this
     Todo = { fg = c.aurora.yellow, bg = c.none },                                                 -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-    Type = { fg = c.frost.artic_water },                                                          -- (preferred) int, long, char, etc.
+    Type = { fg = c.frost.polar_water },                                                          -- (preferred) int, long, char, etc.
     Typedef = { fg = c.frost.artic_water },                                                       --  A typedef
     Underlined = { underline = true },                                                            -- (preferred) text that stands out, HTML links
     -- ("Ignore", below, may be invisible...)
