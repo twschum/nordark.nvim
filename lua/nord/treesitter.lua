@@ -97,11 +97,12 @@ function treesitter.highlights()
     ["@constant"] = { fg = c.snow_storm.origin },                                                    --  constant identifiers
     ["@constant.builtin"] = { fg = c.frost.artic_water },                                            --  built-in constant values
     ["@constant.macro"] = { fg = c.frost.artic_water },                                              --  constants defined by the preprocessor
-    ["@module"] = { fg = c.snow_storm.darkened },                                                    --  modules or namespaces
+    ["@module"] = { fg = c.frost.polar_water },                                                      -- NOTE c.snow_storm.darkened alternative, prefer go to match Type modules or namespaces
     ["@namespace"] = { link = "@module" },                                                           -- @deprecated
     ["@string.special.symbol"] = { fg = c.snow_storm.origin },                                       --  symbols or atoms
     ["@symbol"] = { link = "@string.special.symbol" },                                               -- @deprecated
 
+    -- https://gist.github.com/swarn/fb37d9eefe1bc616c2a7e476c0bc0316
     -- Text
     ["@text"] = { fg = c.snow_storm.origin },                           -- @deprecated
     ["@markup.strong"] = { bold = true },                               --  bold text
@@ -112,7 +113,6 @@ function treesitter.highlights()
     ["@text.underline"] = { link = "@markup.underline" },               -- @deprecated
     ["@markup.strikethrough"] = { strikethrough = true },               --  strikethrough text
     ["@text.strike"] = { link = "@markup.strikethrough" },              -- @deprecated
-    ["@markup.heading"] = { fg = c.frost.ice, bold = true },            --  text that is part of a title
     ["@text.title"] = { link = "@markup.heading" },                     -- @deprecated
     ["@markup.raw"] = { fg = c.frost.polar_water },                     --  literal or verbatim text
     ["@text.literal"] = { link = "@markup.raw" },                       -- @deprecated
@@ -126,6 +126,7 @@ function treesitter.highlights()
     ["@markup.environment"] = { fg = c.frost.polar_water },             --  text environments of markup languages
     ["@text.environment"] = { link = "@markup.environment" },           -- @deprecated
     ["@markup.environment.name"] = { fg = c.frost.artic_water },        --  text indicating the type of an environment
+    ["@markup.heading"] = { fg = c.frost.artic_water, bold = true },    --  markdown headings
     ["@text.environment.name"] = { link = "@markup.environment.name" }, -- @deprecated
     ["@text.reference"] = { link = "@markup.link" },                    -- @deprecated
     ["@comment.todo"] = { fg = c.aurora.yellow },                       --  todo notes
@@ -166,7 +167,7 @@ function treesitter.highlights()
     ["@lsp.type.boolean"] = { link = "@boolean" },
     ["@lsp.type.builtinType"] = { link = "@type.builtin" },
     ["@lsp.type.class"] = { link = "@type" },
-    ["@lsp.type.comment"] = {},  -- don't let lsp comment override treesitter identifying tags and URLs
+    ["@lsp.type.comment"] = {}, -- don't let lsp comment override treesitter identifying tags and URLs
     ["@lsp.type.decorator"] = { link = "@attribute" },
     ["@lsp.type.deriveHelper"] = { link = "@attribute" },
     ["@lsp.type.enum"] = { link = "@type" },
