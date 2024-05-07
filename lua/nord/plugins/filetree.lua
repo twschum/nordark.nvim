@@ -31,8 +31,8 @@ function filetree.highlights()
     NvimTreeGitIgnoredIcon = { fg = c.grey_fg },
     NvimTreeGitRenamed = { fg = c.aurora.yellow },
     NvimTreeGatRenamedIcon = { fg = c.aurora.yellow },
-    NvimTreeGitStaged = { fg = c.frost.artic_water },
-    NvimTreeGitStagedIcon = { fg = c.frost.artic_water },
+    NvimTreeGitStaged = { fg = c.sun },
+    NvimTreeGitStagedIcon = { fg = c.sun },
 
     -- NeoTree
     NeoTreeDimText = { fg = c.polar_night.brightest },
