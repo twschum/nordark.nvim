@@ -39,7 +39,7 @@ function cmp.highlights()
     CmpItemKindReference = { fg = c.snow_storm.brighter },
     CmpItemKindEnumMember = { fg = c.aurora.purple },
     CmpItemKindStruct = { fg = c.frost.artic_water },
-    CmpItemKindValue = { fg = c.cyan },
+    CmpItemKindValue = { fg = c.polar_water },
     CmpItemKindEvent = { fg = c.aurora.yellow },
     CmpItemKindOperator = { fg = c.snow_storm.brighter },
     CmpItemKindTypeParameter = { fg = c.frost.ice },

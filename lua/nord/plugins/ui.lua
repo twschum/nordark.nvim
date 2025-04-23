@@ -116,7 +116,7 @@ function ui.highlights()
     RainbowDelimiterBlue = { fg = c.frost.artic_ocean },
     RainbowDelimiterOrange = { fg = c.aurora.green },
     RainbowDelimiterGreen = { fg = c.aurora.orange },
-    RainbowDelimiterCyan = { fg = c.frost.ice },
+    RainbowDelimiterCyan = { fg = c.frost.polar_water },
     RainbowDelimiterViolet = { fg = c.aurora.purple },
 
     -- tzachar/highlight-undo.nvim

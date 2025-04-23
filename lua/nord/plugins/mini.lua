@@ -4,7 +4,8 @@ local c = require("nord.colors").palette
 
 function mini.highlights()
   return {
-    MiniIndentscopeSymbol = { fg = c.frost.artic_ocean },
+    MiniIndentscopeSymbolOff = { fg = c.polar_night.brighter },
+    MiniIndentscopeSymbol = { fg = c.polar_night.light },
     MiniIndentscopePrefix = { nocombine = true },
   }
 end

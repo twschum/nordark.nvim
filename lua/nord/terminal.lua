@@ -13,18 +13,18 @@ function terminal.apply()
 
   -- colors
   vim.g.terminal_color_1 = c.aurora.red
-  vim.g.terminal_color_9 = c.aurora.red
+  vim.g.terminal_color_9 = c.aurora.red_bright
 
   vim.g.terminal_color_2 = c.aurora.green
-  vim.g.terminal_color_10 = c.vibrant_green
+  vim.g.terminal_color_10 = c.aurora.green_bright
 
   vim.g.terminal_color_3 = c.aurora.yellow
-  vim.g.terminal_color_11 = c.aurora.yellow
+  vim.g.terminal_color_11 = c.aurora.yellow_bright
 
   vim.g.terminal_color_4 = c.frost.artic_water
   vim.g.terminal_color_12 = c.frost.artic_water
 
-  vim.g.terminal_color_5 = c.dark_purple
+  vim.g.terminal_color_5 = c.aurora.purple_dim
   vim.g.terminal_color_13 = c.aurora.purple
 
   vim.g.terminal_color_6 = c.frost.ice
@@ -34,7 +34,7 @@ end
 function terminal.highlights()
   return {
 
-    TermCursor = { fg = c.snow_storm.origin, bg = c.none, reverse = true }, -- cursor in a focused terminal
+    TermCursor = { fg = c.snow_storm.origin, bg = c.none, reverse = true },       -- cursor in a focused terminal
     TermCursorNC = { fg = c.polar_night.brightest, bg = c.none, reverse = true }, -- cursor in an unfocused terminal
   }
 end
