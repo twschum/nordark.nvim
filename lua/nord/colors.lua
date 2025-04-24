@@ -12,7 +12,6 @@ local defaults = {
     brighter = "#3B4252", -- "#434C5E" -- nord2, one_bg2
     brightest = "#434C5E", -- "#4C566A" -- nord3, one_bg3, menu borders
     light = "#4C566A", -- "#616E88" -- out of palette
-    --gray5 = '#60728A',
   },
   snow_storm = {
     darkened = "#9DA6B9", -- halfway to #616E88 from #D8DEE9
@@ -23,8 +22,8 @@ local defaults = {
   },
   frost = {
     polar_water = "#8FBCBB", -- nord7 - classes, types, primatives
-    ice = "#88C0D0", -- nord8 - primary accent color - delcarations, calls, executions statements
     artic_water = "#81A1C1", -- nord9, nord_blue, secondary ui elements; syntactic and reserved keywords; support chars, operators, tags, units, punctuations
+    ice = "#88C0D0", -- nord8 - primary accent color - delcarations, calls, executions statements
     artic_ocean = "#5E81AC", -- nord10, tertiary ui elements; pragmas, comment keywords, perprocessor
   },
   aurora = {
@@ -80,6 +79,7 @@ local defaults = {
   grey_fg = "#565c68", -- comment
   comment_special = "#616E88", -- for links in comments
   grey_fg2 = "#606672",
+  highlight_bg = "#60728A", -- exclusive for search backgrounds?
   light_grey = "#646a76",
   line = "#414753", -- for lines  like vertsplit
   statusline_bg = "#333945",

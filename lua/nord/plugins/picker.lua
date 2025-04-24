@@ -14,6 +14,13 @@ function picker.highlights()
     TelescopeResultsDiffAdd = { bg = c.backlight.green2 },
     TelescopeResultsDiffChange = { bg = c.backlight.yellow2 },
     TelescopeResultsDiffDelete = { bg = c.backlight.red2 },
+
+    -- FzfLua --
+    -- Defaults to Comment
+    FzfLuaDirPart = { fg = c.snow_storm.darkened },
+    FzfLuaSearch = { fg = c.none, bg = c.highlight_bg },
+    FzfLuaLiveSym = { fg = c.none, bg = c.highlight_bg },
+    FzfLuaFzMatch = { underline = true, sp = c.aurora.purple },
   }
 end
 

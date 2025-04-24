@@ -13,7 +13,7 @@ function lazy.highlights()
 
     LazyButton = {
       bg = c.polar_night.bright,
-      fg = c.polar_night.brightest,
+      fg = c.aurora.purple,
     },
 
     LazyH2 = {

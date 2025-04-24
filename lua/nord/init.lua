@@ -36,9 +36,10 @@ function nord.load(opts)
     require("nord.plugins.neogit").highlights(),
     require("nord.plugins.notify").highlights(),
     require("nord.plugins.picker").highlights(),
+    require("nord.plugins.snacks").highlights(),
     require("nord.plugins.ui").highlights()
-  -- Final overrides if a hl gets messed up
-  --require("nord.final")
+    -- Final overrides if a hl gets messed up
+    --require("nord.final")
   )
 end
 

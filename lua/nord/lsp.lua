@@ -5,7 +5,8 @@ local c = require("nord.colors").palette
 
 function lsp.highlights()
   return {
-    -- LspReferenceText = { bg = c.fg_gutter }, -- used for highlighting "text" references
+
+    LspReferenceText = { underline = true, sp = c.snow_storm.darkened }, -- used for highlighting "text" references and vim.illuminate
     -- LspReferenceRead = { bg = c.fg_gutter }, -- used for highlighting "read" references
     -- LspReferenceWrite = { bg = c.fg_gutter }, -- used for highlighting "write" references
 
