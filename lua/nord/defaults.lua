@@ -49,11 +49,12 @@ function defaluts.highlights()
     PmenuSbar = { fg = c.snow_storm.origin, bg = c.polar_night.brighter }, -- Popup menu: scrollbar.
     PmenuThumb = { fg = c.frost.ice, bg = c.polar_night.brightest }, -- Popup menu: Thumb of the scrollbar.
     QuickFixLine = { fg = c.snow_storm.origin, bg = c.none, reverse = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    --Search = { fg = c.frost.ice, bg = c.none, reverse = true }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-    Search = { fg = c.highlight_bg, bg = c.none, reverse = true }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-    IncSearch = { fg = c.none, bg = c.highlight_bg }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-    CurSearch = { fg = c.snow_storm.brightest, bg = c.highlight_bg }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-    --CurSearch = { link = "IncSearch" },
+    Search = { fg = c.frost.ice, bg = c.none, reverse = true }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    IncSearch = { fg = c.snow_storm.brightest, bg = c.frost.ice }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+    --Search = { fg = c.aurora.purple }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    --IncSearch = { fg = c.aurora.purple, bold = true }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+    --CurSearch = { fg = c.aurora.brightest, bg = c.high }, -- current search results
+    CurSearch = { link = "IncSearch" }, -- current search results
     SpecialKey = { fg = c.polar_night.brightest }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
     SpellBad = { sp = c.frost.ice, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
     SpellCap = { sp = c.snow_storm.brighter, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.

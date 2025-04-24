@@ -78,6 +78,7 @@ local defaults = {
   grey = "#4b515d",
   grey_fg = "#565c68", -- comment
   comment_special = "#616E88", -- for links in comments
+  --blue_grey = "#616E88",
   grey_fg2 = "#606672",
   highlight_bg = "#60728A", -- exclusive for search backgrounds?
   light_grey = "#646a76",
