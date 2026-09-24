@@ -50,6 +50,9 @@ function snacks.highlights()
     SnacksPickerIcon = { fg = c.frost.ice },
     SnacksPickerPrompt = { fg = c.frost.ice },
     SnacksPickerDir = { fg = c.snow_storm.darkened },
+    -- hidden (dotfile) entries: subtle/dimmed + italic (git status & ignored still take precedence)
+    SnacksPickerPathHidden = { fg = c.white, italic = true },
+    SnacksPickerPathIgnored = { link = "Comment" },
     SnacksPickerGitStatusIgnored = { link = "Comment" },
     SnacksPickerGitStatusUntracked = { link = "Comment" },
     SnacksPickerGitStatusStaged = { fg = c.aurora.green },

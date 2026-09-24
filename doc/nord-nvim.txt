@@ -1,9 +1,9 @@
-*nord-nvim.txt*                                          Nord theme for Neovim
+*nordark-nvim.txt*                                  Nord Dark theme for Neovim
 
 ==============================================================================
 Table of Contents                                *nord-nvim-table-of-contents*
 
-1. 🖌️ nord.nvim                             |nord-nvim-🖌️-nord.nvim|
+1. 🖌️ nordark.nvim                             |nord-nvim-🖌️-nord.nvim|
   - ✨ Features                    |nord-nvim-🖌️-nord.nvim-✨-features|
   - ⚡️ Requirements      |nord-nvim-🖌️-nord.nvim-⚡️-requirements|
   - 📦 Installation          |nord-nvim-🖌️-nord.nvim-📦-installation|
@@ -13,7 +13,7 @@ Table of Contents                                *nord-nvim-table-of-contents*
   - 🎉 Credits                    |nord-nvim-🖌️-nord.nvim-🎉-credits|
 
 ==============================================================================
-1. 🖌️ nord.nvim                             *nord-nvim-🖌️-nord.nvim*
+1. 🖌️ nordark.nvim                          nord-nvim-🖌️-nord.nvim*
 
 Neovim theme using the Nord palette <https://www.nordtheme.com/> that tries to
 be as close as possible to the official vim theme
